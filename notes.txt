@@ -1,0 +1,6 @@
+Random ideas from twitter for things to check:
+
+forking history (apparently is not obvious)
+increase/decrease in fork/stars (requires history)
+time to first response on issue (older projects should allow for more time)
+are there active forks? (shows someone took your stuff and ran with it maybe when you slowed down)

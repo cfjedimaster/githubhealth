@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            
+            <h1>GitHub Health Report</h1>
+
+            <div id="loginDiv">
+                <p>
+                To begin, simply click the button below to authenticate with GitHub.
+                </p>
+                <button id="authButton">GitHub</button>
+            </div>
+            
+            <div id="profileDiv" class="panel panel-default" style="display:none">
+                <div class="panel-heading"><h3 class="panel-title"></h3></div>
+                <div class="panel-body">
+                    <img src="" style="max-width: 125px" class="img-responsive img-circle pull-right" alt="Avatar">
+                </div>
+            </div>
+            
+            <div id="filterDiv" style="display:none">
+                <h2>Filter</h2>
+                <div class="btn-group" data-toggle="buttons">
+                    <!--
+                    <button type="button" class="btn btn-danger" data-filter="danger" data-toggle="button">Bad</button>
+                    <button type="button" class="btn btn-warning" data-filter="warning">Warning</button>
+                    <button type="button" class="btn btn-default" data-filter="default">Default</button>
+                    <button type="button" class="btn btn-info" data-filter="info">Good</button>
+                    <button type="button" class="btn btn-success" data-filter="success">Great</button>
+                    -->
+                    <label class="btn btn-danger active">
+                    <input type="checkbox" autocomplete="off" checked data-filter="danger">Bad
+                    </label>
+                    <label class="btn btn-warning active">
+                    <input type="checkbox" autocomplete="off" checked data-filter="warning">Warning
+                    </label>
+                    <label class="btn btn-default active">
+                    <input type="checkbox" autocomplete="off" checked data-filter="default">Default
+                    </label>
+                    <label class="btn btn-info active">
+                    <input type="checkbox" autocomplete="off" checked data-filter="info">Good
+                    </label>
+                    <label class="btn btn-success active">
+                    <input type="checkbox" autocomplete="off" checked data-filter="success">Great
+                    </label>
+                </div>
+
+                <p/>
+            </div>
+                        
+            <div id="results">
+            </div>
+            
+        </div>
+    
+        
+        
+        <script id="repoTemplate" type="text/x-handlebars-template">
+            <div class="repo panel panel-{{level}}" id="repo{{id}}">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><a href="{{html_url}}" target="_new">{{name}}</a></h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                    This repo was created on {{created}} and last updated on {{lastupdated}} ({{lastago}} days ago).
+                    </p>
+                    <p>
+                        There are currently {{open_issues_count}} open issues.
+                    </p>
+                </div>
+            </div>
+        </script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> 
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v3.0.0.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/hello.min.js"></script>
+        <script src="js/github.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
