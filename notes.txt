@@ -1,5 +1,6 @@
 Random ideas from twitter for things to check:
 
+lack of a readme.md
 forking history (apparently is not obvious)
 increase/decrease in fork/stars (requires history)
 time to first response on issue (older projects should allow for more time)
