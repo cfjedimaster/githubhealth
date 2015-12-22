@@ -6,7 +6,11 @@ var repoTemplate;
 $(document).ready(function() {
     
     $("#authButton").on("click", function() {
-       hello('github').login();
+       hello('github').login().then(function() {
+		   
+	   }, function(e) {
+		 console.log('Error',e);  
+	   });
     });
     
     var templateSource = $("#repoTemplate").html();
